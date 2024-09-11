@@ -7,8 +7,17 @@ from plugin_manager import PluginManager
 from openai_helper import OpenAIHelper, default_max_tokens, are_functions_available
 from telegram_bot import ChatGPTTelegramBot
 
+import express from 'express'
+
+
 
 def main():
+    const app = express()
+    const port = 8080
+
+    app.listen(port, () => {
+        console.log(`Server started on port ${port}`);
+    })
     # Read .env file
     load_dotenv()
 
